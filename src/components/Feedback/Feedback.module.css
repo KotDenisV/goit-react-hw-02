@@ -1,0 +1,6 @@
+.wraper {
+  margin-top: 20px;
+  display: flex;
+  direction: column;
+  gap: 10px;
+}
