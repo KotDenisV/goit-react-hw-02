@@ -1,6 +1,10 @@
 .wraper {
   margin-top: 20px;
+}
+
+.list {
   display: flex;
-  direction: column;
+  flex-direction: column;
   gap: 10px;
+  font-size: 20px;
 }
