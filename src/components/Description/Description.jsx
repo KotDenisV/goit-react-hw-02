@@ -1,11 +1,10 @@
-import s from './Description.modele.css';
+import s from './Description.module.css';
 
 function Description() {
     return (
-        <div>
+        <div className={s.wraper}>
             <h1 className={s.title}>Sip Happens Café</h1>
-            <p className={s.text}>Please leave your feedback about our service by selecting one of the options below.</p>
-            
+            <p className={s.text}>Please leave your feedback about our service by selecting one of the options below.</p>        
       </div>
     );
 };
