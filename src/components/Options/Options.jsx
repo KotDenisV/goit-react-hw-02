@@ -1,16 +1,16 @@
 import s from './Options.module.css';
 
-function Options({setVotingList}) {
-    const handleVote = option => {
-        setVotingList(prev => ({ ...prev, [option]: prev[option] + 1 }));
-    };
+function Options({updateFeedback, resetFeedback, totalFeedback}) {
+    
     return (
        <div className={s.wraper}>
-          <button onClick={() => handleVote('good')}>Good</button>
-          <button onClick={() => handleVote('neutral')}>Neutral</button>
-          <button onClick={() => handleVote('bad')}>Bad</button>
-          <button>Reset</button>
-        </div> 
+          <button onClick={() => updateFeedback('good')}>Good</button>
+          <button onClick={() => updateFeedback('neutral')}>Neutral</button>
+          <button onClick={() => updateFeedback('bad')}>Bad</button>
+          {totalFeedback > 0 && (
+          <button onClick={resetFeedback}>Reset</button>
+          )}
+       </div> 
     );
 };
 
